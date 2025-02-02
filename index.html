@@ -7,94 +7,80 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Dinámico -->
+    <!-- Header -->
     <header>
         <div class="header-content">
-            <div class="profile-container">
-                <img src="perfil.jpeg" alt="Kelly Germano" class="profile-photo">
-            </div>
-            <h1 class="animated-text">Kelly Germano</h1>
+            <img src="perfil.jpeg" alt="Kelly Germano" class="profile-photo">
+            <h1>Kelly Germano</h1>
             <p>Ingeniera de Software | Cientista de Datos | Analista de Ciberseguridad</p>
-        </div>    
             <nav>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#educacion">Educación</a>
-                <a href="#experiencia">Experiencia</a>
-                <a href="#contacto">Contacto</a>
+                <button class="menu-toggle">☰</button>
+                <div class="menu">
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#educacion">Educación</a>
+                    <a href="#experiencia">Experiencia</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Siempre he sido apasionada por la tecnología. Tras más de 15 años liderando equipos en la cocina profesional, decidí hacer una transición de carrera hacia la Ingeniería de Software y la Ciencia de Datos. Actualmente, estoy en mi último año de Ingeniería en Software y complementando mi formación con un posgrado en Data Science. Me encanta resolver problemas complejos, analizar datos y construir soluciones innovadoras.</p>
-    </section>
+    <!-- Secciones -->
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Siempre he sido apasionada por la tecnología. Tras más de 15 años liderando equipos en la cocina profesional, decidí dar un nuevo rumbo a mi carrera hacia la Ingeniería de Software y la Ciencia de Datos. Actualmente estoy en el último año de Ingeniería en Software y complementando mi formación con un posgrado en Data Science. Mi misión es resolver problemas complejos, analizar datos y construir soluciones innovadoras.</p>
+        </section>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos">
-        <h2>Proyectos Destacados</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="proyecto1.png" alt="Sistema Predictivo">
-                <h3>Sistema Predictivo de Demandas</h3>
-                <p>Proyecto en Encobox utilizando machine learning para optimizar entregas.</p>
-                <a href="https://github.com/tuusuario/proyecto1" target="_blank">Ver en GitHub</a>
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid" id="projects-container"></div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="python.png" alt="Python"><p>Python</p></div>
+                <div class="skill-card"><img src="files.png" alt="SQL"><p>SQL</p></div>
+                <div class="skill-card"><img src="css-file.png" alt="HTML/CSS"><p>HTML/CSS</p></div>
+                <div class="skill-card"><img src="js.png" alt="JavaScript"><p>JavaScript</p></div>
             </div>
-            <div class="project-card">
-                <img src="proyecto2.png" alt="Ciberseguridad">
-                <h3>Seguridad de Redes</h3>
-                <p>Simulación de ataques y defensa en redes empresariales.</p>
-                <a href="https://github.com/tuusuario/proyecto2" target="_blank">Ver en GitHub</a>
+        </section>
+
+        <section id="educacion">
+            <h2>Educación y Certificaciones</h2>
+            <div class="education-list">
+                <div class="education-item"><h3>Grado en Ingeniería de Software</h3><p>UNIGRAN EAD (En curso, 8º semestre)</p></div>
+                <div class="education-item"><h3>Posgrado en Data Science</h3><p>(En curso)</p></div>
+                <div class="education-item"><h3>Certificación en Ciberseguridad</h3><p>Google Coursera</p></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Habilidades -->
-    <section id="habilidades">
-        <h2>Habilidades Técnicas</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><img src="python.png" alt="Python"><p>Python</p></div>
-            <div class="skill-card"><img src="files.png" alt="SQL"><p>SQL</p></div>
-            <div class="skill-card"><img src="css-file.png" alt="HTML/CSS"><p>HTML/CSS</p></div>
-            <div class="skill-card"><img src="js.png" alt="JavaScript"><p>JavaScript</p></div>
-        </div>
-    </section>
+        <section id="experiencia">
+            <h2>Experiencia</h2>
+            <div class="experience-list">
+                <div class="experience-item"><h3>Prácticas en Ingeniería de Software</h3><p>Encobox (Barcelona)</p><p>Optimización de procesos logísticos mediante software y análisis de datos.</p></div>
+                <div class="experience-item"><h3>Cocinera Profesional</h3><p>+15 años de experiencia en gestión de cocina y liderazgo de equipos.</p></div>
+            </div>
+        </section>
 
-    <!-- Sección Educación -->
-    <section id="educacion">
-        <h2>Educación y Certificaciones</h2>
-        <div class="education-list">
-            <div class="education-item"><h3>Grado en Ingeniería de Software</h3><p>UNIGRAN EAD (En curso, 6º semestre)</p></div>
-            <div class="education-item"><h3>Posgrado en Data Science</h3><p>(En curso)</p></div>
-            <div class="education-item"><h3>Certificación en Ciberseguridad</h3><p>Google Coursera</p></div>
-        </div>
-    </section>
-
-    <!-- Sección Experiencia -->
-    <section id="experiencia">
-        <h2>Experiencia</h2>
-        <div class="experience-list">
-            <div class="experience-item"><h3>Prácticas en Ingeniería de Software</h3><p>Encobox (Barcelona)</p><p>Optimización de procesos logísticos mediante software y análisis de datos.</p></div>
-            <div class="experience-item"><h3>Cocinera Profesional</h3><p>+15 años de experiencia en gestión de cocina y liderazgo de equipos.</p></div>
-        </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="contact-grid">
-            <div class="contact-card"><img src="email-icon.png" alt="Email"><p>Email</p><a href="mailto:me@kellygermano.com">me@kellygermano.com</a></div>
-            <div class="contact-card"><img src="linkedin-icon.png" alt="LinkedIn"><p>LinkedIn</p><a href="https://linkedin.com/in/kellygermano" target="_blank">linkedin.com/in/kellygermano</a></div>
-            <div class="contact-card"><img src="github-icon.png" alt="GitHub"><p>GitHub</p><a href="https://github.com/kellygermano" target="_blank">github.com/kellygermano</a></div>
-        </div>
-    </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-card"><img src="mail.png" alt="Email"><p>Email</p><a href="mailto:me@kellygermano.com">me@kellygermano.com</a></div>
+                <div class="contact-card"><img src="linkedin.png" alt="LinkedIn"><p>LinkedIn</p><a href="https://linkedin.com/in/kellygermano" target="_blank">linkedin.com/in/kellygermano</a></div>
+                <div class="contact-card"><img src="github.png" alt="GitHub"><p>GitHub</p><a href="https://github.com/kellygermano" target="_blank">github.com/kellygermano</a></div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Kelly Germano. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>
