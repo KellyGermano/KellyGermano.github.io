@@ -10,29 +10,5 @@
         "nombre": "Simulación de Redes Seguras",
         "descripcion": "Implementación de pruebas de penetración y simulaciones para proteger sistemas empresariales contra ciberataques.",
         "github": "https://github.com/tuusuario/proyecto-seguridad"
-    },
-    {
-        "imagen": "tech.jpg",
-        "nombre": "Aplicación Web de Visualización",
-        "descripcion": "Desarrollo de una aplicación web interactiva utilizando Django y Streamlit para visualizar datos en tiempo real.",
-        "github": "https://github.com/tuusuario/proyecto-visualizacion"
-    },
-    {
-        "imagen": "neural.jpg",
-        "nombre": "Reconocimiento de Emociones",
-        "descripcion": "Modelo de visión por computadora para detectar emociones humanas a partir de imágenes usando Python y TensorFlow.",
-        "github": "https://github.com/tuusuario/proyecto-emociones"
-    },
-    {
-        "imagen": "tech-gif.gif",
-        "nombre": "Automatización con Web Scraping",
-        "descripcion": "Proyecto que extrae y organiza datos desde múltiples sitios web usando BeautifulSoup y Selenium.",
-        "github": "https://github.com/tuusuario/proyecto-scraping"
-    },
-    {
-        "imagen": "files.png",
-        "nombre": "Gestión de Bases de Datos",
-        "descripcion": "Diseño y administración de bases de datos relacionales y NoSQL, optimizando consultas y estructuras de datos.",
-        "github": "https://github.com/tuusuario/proyecto-bases-datos"
     }
 ]
