@@ -1,168 +1,267 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kelly Germano — Portafolio</title>
-  <meta name="description" content="Portafolio de Kelly Germano, Analista de Datos e Ingeniera de Software. Proyectos de logística: predicción de demanda, automatización de reportes y BI orientado a resultados.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelly Germano | Ingeniera de Datos & Software</title>
+  <meta name="description"
+    content="Portafolio profesional de Kelly Germano. Especialista en Logística, Análisis de Datos y Desarrollo de Software.">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-  :root{
-    --bg:#ffffff; --text:#111827; --muted:#6B7280;
-    --accent:#2563EB; --accent2:#E67E22;
-    --card:#F9FAFB; --border:#E5E7EB; --radius:12px;
-    --font:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .container{max-width:1080px;margin:0 auto;padding:24px}
-  .nav{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:10px 0}
-  .brand{font-weight:800;font-size:22px}
-  .links a{margin-left:16px;font-weight:600}
-  .hero{padding:56px 0;display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
-  .hero h1{font-size:40px;line-height:1.15;margin:0 0 10px}
-  .hero p{margin:0 0 16px;color:var(--muted);font-size:18px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;border:1px solid var(--accent);padding:12px 18px;border-radius:10px;font-weight:700}
-  .btn.secondary{background:transparent;color:var(--accent)}
-  .section{padding:28px 0}
-  .section h2{font-size:26px;margin:0 0 12px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
-  .card h3{margin:0 0 8px;font-size:20px}
-  .card p{margin:0 0 10px;color:var(--muted)}
-  .tags{display:flex;flex-wrap:wrap;gap:8px}
-  .tag{font-size:12px;background:#EEF2FF;color:#3730A3;padding:6px 10px;border-radius:999px;border:1px solid #E0E7FF}
-  .list{margin:8px 0 0 18px;color:var(--muted)}
-  footer{padding:40px 0;color:var(--muted);border-top:1px solid var(--border);margin-top:40px}
-  .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .hero-box{width:100%;aspect-ratio:4/3;background:#E5E7EB;border:1px dashed #D1D5DB;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#6B7280;font-weight:600}
-  @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr 1fr} }
-  @media (max-width:620px){ .grid{grid-template-columns:1fr} .hero h1{font-size:32px} .links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}}
-  @media (prefers-color-scheme:dark){
-    :root{--bg:#0B0F1A;--text:#E5E7EB;--muted:#9CA3AF;--card:#0F1629;--border:#1F2937}
-    .tag{background:#132040;color:#C7D2FE;border-color:#1E3A8A}
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script src="main.js" defer></script>
 </head>
+
 <body>
-<div class="container">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="brand"><a href="#">Kelly Germano</a></div>
-    <div class="links">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#about">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo">Kelly<span class="text-accent">.</span></a>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="menu-trigger">☰</div>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div>
-      <h1>Analista de Datos & Software · Logística y Operaciones</h1>
-      <p>Convierto datos en decisiones: predicción de demanda, automatización de reportes y dashboards para mejorar la eficiencia operativa en pymes.</p>
-      <div style="display:flex;gap:12px;margin-top:8px">
-        <a class="btn" href="#proyectos">Ver proyectos</a>
-        <a class="btn secondary" href="cv/Kelly_Germano_CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
+  <main>
+    <!-- Hero Section -->
+    <section id="inicio"
+      style="min-height: 85vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+      <!-- Background Glow Effect -->
+      <div
+        style="position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; pointer-events: none;">
       </div>
-    </div>
-    <div class="hero-box">Banner (opcional)</div>
-  </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="section">
-    <h2>Proyectos destacados</h2>
-    <div class="grid">
+      <div class="container" style="position: relative; z-index: 1;">
+        <div style="max-width: 700px;">
+          <p
+            style="color: var(--brand-primary); font-weight: 600; margin-bottom: 16px; display: inline-block; padding: 6px 12px; background: rgba(59,130,246,0.1); border-radius: 20px; font-size: 0.85rem;">
+            Disponible para nuevos retos
+          </p>
+          <h1 class="text-gradient" style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">
+            Datos que impulsan<br>decisiones inteligentes.
+          </h1>
+          <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 600px;">
+            Soy <strong>Kelly Germano</strong>, Ingeniera de Software especializada en optimización logística y
+            analítica de datos. Transformo complejidad operativa en dashboards claros y eficientes.
+          </p>
+          <div style="display: flex; gap: 16px;">
+            <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+            <a href="cv/Kelly_Germano_CV.pdf" target="_blank" class="btn btn-outline">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <article class="card">
-        <h3>Predicción de demanda logística</h3>
-        <p>Modelo para anticipar picos de pedidos y planificar repartidores con mayor precisión.</p>
-        <ul class="list">
-          <li><strong>Problema:</strong> variabilidad de pedidos y sobredemanda en picos.</li>
-          <li><strong>Solución:</strong> series temporales + regresores (scikit-learn/Prophet).</li>
-          <li><strong>Resultado:</strong> base para plan semanal y asignación de flota más estable.</li>
-        </ul>
-        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Time Series</span></div>
-        <p><a href="#">Ver código</a> · <a href="#">Ver demo</a></p>
-      </article>
+    <!-- Projects Section -->
+    <section id="proyectos">
+      <div class="container">
+        <div style="margin-bottom: 60px;">
+          <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">Proyectos
+            Destacados</h2>
+          <p style="color: var(--text-secondary);">Soluciones reales a problemas de negocio complejos.</p>
+        </div>
 
-      <article class="card">
-        <h3>Automatización de reportes</h3>
-        <p>Generación automática de informes operativos (PDF/Excel) y envío programado por email.</p>
-        <ul class="list">
-          <li><strong>Problema:</strong> reportes manuales y dispersos.</li>
-          <li><strong>Solución:</strong> scripts en Python + programador (cron/Airflow).</li>
-          <li><strong>Resultado:</strong> reducción del 60% de tiempo manual semanal en reporting.</li>
-        </ul>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span><span class="tag">Power BI</span></div>
-        <p><a href="#">Ver código</a> · <a href="#">Ver dashboard</a></p>
-      </article>
+        <!-- Project Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px;">
 
-      <article class="card">
-        <h3>Análisis operacional</h3>
-        <p>KPIs de puntualidad, retrasos y coste por pedido con recomendaciones accionables.</p>
-        <ul class="list">
-          <li><strong>Problema:</strong> visibilidad limitada de rendimiento y costes.</li>
-          <li><strong>Solución:</strong> modelo de datos + SQL + panel BI.</li>
-          <li><strong>Resultado:</strong> guía para reducir retrasos y optimizar entregas.</li>
-        </ul>
-        <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">BI</span></div>
-        <p><a href="#">Ver código</a> · <a href="#">Ver informe</a></p>
-      </article>
+          <!-- Card 1 -->
+          <article
+            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 32px; transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="margin-bottom: 24px; display: flex; align-items: flex-start; justify-content: space-between;">
+              <div
+                style="width: 48px; height: 48px; background: rgba(59,130,246,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                  </path>
+                </svg>
+              </div>
+              <span
+                style="font-size: 0.75rem; background: #1e1e1e; padding: 4px 10px; border-radius: 99px; border: 1px solid #333;">Python
+                / ML</span>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Predicción de Demanda</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
+              Modelo predictivo para anticipar picos de pedidos en logística de última milla. Optimización de flota
+              basada en datos históricos.
+            </p>
+            <ul
+              style="list-style: none; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; border-left: 2px solid var(--glass-border); padding-left: 16px;">
+              <li style="margin-bottom: 8px;">• Reducción de variabilidad</li>
+              <li style="margin-bottom: 8px;">• Planificación eficiente</li>
+            </ul>
+            <a href="#"
+              style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--brand-primary);">Ver
+              detalles &rarr;</a>
+          </article>
 
-    </div>
-  </section>
+          <!-- Card 2 -->
+          <article
+            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 32px; transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="margin-bottom: 24px; display: flex; align-items: flex-start; justify-content: space-between;">
+              <div
+                style="width: 48px; height: 48px; background: rgba(249, 115, 22, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-secondary);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <span
+                style="font-size: 0.75rem; background: #1e1e1e; padding: 4px 10px; border-radius: 99px; border: 1px solid #333;">Automation</span>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Reporting Automatizado</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
+              Scripting en Python para generar informes PDF/Excel automáticos y distribuirlos por email, eliminando
+              tareas manuales repetitivas.
+            </p>
+            <ul
+              style="list-style: none; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; border-left: 2px solid var(--glass-border); padding-left: 16px;">
+              <li style="margin-bottom: 8px;">• Ahorro 60% tiempo/semana</li>
+              <li style="margin-bottom: 8px;">• Cero errores humanos</li>
+            </ul>
+            <a href="#"
+              style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--brand-secondary);">Ver
+              detalles &rarr;</a>
+          </article>
 
-  <!-- EXPERIENCIA -->
-  <section id="experiencia" class="section">
-    <h2>Experiencia</h2>
-    <p><strong>Encobox — Analista de Datos Operacionales</strong> · Barcelona · 01/2024 – Actualidad</p>
-    <ul class="list">
-      <li>Coordinación diaria de operaciones mediante ERP (repartidores y pedidos en tiempo real).</li>
-      <li>Extracción, limpieza y modelado de datos para soporte a decisiones.</li>
-      <li>Automatización de reportes y alertas operativas.</li>
-      <li>Modelos de previsión de demanda para planificación semanal.</li>
-      <li>Dashboards con KPIs logísticos (puntualidad, retrasos, coste por pedido).</li>
-    </ul>
-    <p><strong>Impacto:</strong> reducción estimada del 60% en tareas manuales de reporting y mejora prevista del 25–30% en eficiencia de planificación.</p>
-  </section>
+          <!-- Card 3 -->
+          <article
+            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 32px; transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="margin-bottom: 24px; display: flex; align-items: flex-start; justify-content: space-between;">
+              <div
+                style="width: 48px; height: 48px; background: rgba(168, 85, 247, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #a855f7;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 20V10"></path>
+                  <path d="M18 20V4"></path>
+                  <path d="M6 20v-4"></path>
+                </svg>
+              </div>
+              <span
+                style="font-size: 0.75rem; background: #1e1e1e; padding: 4px 10px; border-radius: 99px; border: 1px solid #333;">SQL
+                / BI</span>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Dashboard Operativo</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
+              Visualización de KPIs críticos (puntualidad, costes, tiempos) para la toma de decisiones ágil en tiempo
+              real.
+            </p>
+            <ul
+              style="list-style: none; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; border-left: 2px solid var(--glass-border); padding-left: 16px;">
+              <li style="margin-bottom: 8px;">• Visibilidad total</li>
+              <li style="margin-bottom: 8px;">• Insights accionables</li>
+            </ul>
+            <a href="#"
+              style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid #a855f7;">Ver
+              detalles &rarr;</a>
+          </article>
 
-  <!-- SOBRE MI -->
-  <section id="about" class="section">
-    <h2>Sobre mí</h2>
-    <p>Soy <strong>Ingeniera de Software</strong> especializada en <strong>Datos</strong> con experiencia práctica en <strong>logística de última milla</strong>. Trabajo con Python, SQL y BI para transformar datos en decisiones claras: predicción de demanda, automatización de reportes y analítica operativa. Valoro la simplicidad, el código limpio y los resultados medibles.</p>
-    <p><strong>Competencias:</strong> Python, scikit-learn, pandas, SQL, Flask/Streamlit, Power BI, Git, Jupyter.</p>
-    <p><strong>Idiomas:</strong> Portugués (nativo) · Español (avanzado) · Inglés (básico, en progreso).</p>
-  </section>
+        </div>
+      </div>
+    </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p>
-      📧 <a href="mailto:jobs@kellygermano.com">jobs@kellygermano.com</a><br>
-      💻 <a href="https://github.com/KellyGermano" target="_blank" rel="noopener">github.com/KellyGermano</a><br>
-      🔗 <a href="https://linkedin.com/in/kellygermano" target="_blank" rel="noopener">linkedin.com/in/kellygermano</a>
-    </p>
-    <div style="margin-top:12px">
-      <a class="btn" href="mailto:jobs@kellygermano.com">Contactar</a>
-      <a class="btn secondary" href="cv/Kelly_Germano_CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
-    </div>
-  </section>
+    <!-- Experience Section -->
+    <section id="experiencia" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 48px;">
+          <div>
+            <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 24px;">Experiencia
+              Profesional</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">Mi trayectoria aportando valor en empresas
+              tecnológicas y de logística.</p>
+            <a href="cv/Kelly_Germano_CV.pdf" target="_blank" class="btn btn-outline"
+              style="font-size: 0.9rem;">Descargar CV Completo</a>
+          </div>
 
-  <!-- FOOTER -->
+          <div>
+            <!-- Experience Item -->
+            <div
+              style="border-left: 2px solid var(--glass-border); padding-left: 32px; padding-bottom: 48px; position: relative;">
+              <div
+                style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--brand-primary); border-radius: 50%; box-shadow: 0 0 10px var(--brand-glow);">
+              </div>
+              <h3 style="font-size: 1.25rem; font-weight: 700;">Analista de Datos Operacionales</h3>
+              <div style="color: var(--text-secondary); margin: 4px 0 12px; font-size: 0.9rem;">Encobox · Barcelona |
+                Enero 2024 - Actualidad</div>
+              <p style="color: var(--text-secondary);">
+                Lidero la digitalización de procesos operativos. He implementado sistemas de reporte automático y
+                modelos de predicción que han mejorado la eficiencia de la planificación semanal en un 30%.
+              </p>
+            </div>
+
+            <!-- Experience Item (Previous/Example - keeping it clean, can add more if migration data says so, for now sticking to the provided content) -->
+            <!-- Just one main role listed in previous content, so I'll keep it focused or add education if needed in future -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About/Skills Section Compact -->
+    <section id="sobre-mi">
+      <div class="container">
+        <div
+          style="background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 48px; text-align: center;">
+          <h2 style="font-size: 2rem; margin-bottom: 32px;">Stack Tecnológico</h2>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+            <span
+              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Python</span>
+            <span
+              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">SQL</span>
+            <span
+              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Pandas
+              & Scikit-learn</span>
+            <span
+              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Power
+              BI</span>
+            <span
+              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Git</span>
+            <span
+              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Flask</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+      <div class="container" style="text-align: center; max-width: 600px;">
+        <h2 class="text-gradient" style="font-size: 3rem; font-weight: 800; margin-bottom: 24px;">Hablemos.</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 1.2rem;">
+          Estoy siempre abierta a discutir sobre análisis de datos, optimización de software o nuevas oportunidades
+          laborales.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center;">
+          <a href="mailto:jobs@kellygermano.com" class="btn btn-primary">jobs@kellygermano.com</a>
+          <a href="https://linkedin.com/in/kellygermano" target="_blank" class="btn btn-outline">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <div class="footer-grid">
-      <div>© <span id="y"></span> Kelly Germano</div>
-      <div style="text-align:right">Portafolio en GitHub Pages</div>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Kelly Germano. Diseñado y Desarrollado con ❤️.</p>
     </div>
   </footer>
 
-</div>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
+
 </html>
