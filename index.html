@@ -7,6 +7,32 @@
   <title>Kelly Germano | Ingeniera de Datos & Software</title>
   <meta name="description"
     content="Portafolio profesional de Kelly Germano. Especialista en Logística, Análisis de Datos y Desarrollo de Software.">
+  <link rel="canonical" href="https://kellygermano.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kellygermano.github.io/">
+  <meta property="og:title" content="Kelly Germano | Ingeniera de Datos & Software">
+  <meta property="og:description"
+    content="Portafolio profesional de Kelly Germano. Especialista en Logística, Análisis de Datos y Desarrollo de Software.">
+  <meta property="og:image" content="https://kellygermano.github.io/images/profile_2.jpeg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kellygermano.github.io/">
+  <meta property="twitter:title" content="Kelly Germano | Ingeniera de Datos & Software">
+  <meta property="twitter:description"
+    content="Portafolio profesional de Kelly Germano. Especialista en Logística, Análisis de Datos y Desarrollo de Software.">
+  <meta property="twitter:image" content="https://kellygermano.github.io/images/profile_2.jpeg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +45,21 @@
 
   <!-- Scripts -->
   <script src="main.js" defer></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kelly Germano",
+    "url": "https://kellygermano.github.io/",
+    "jobTitle": "Ingeniera de Datos & Software",
+    "sameAs": [
+      "https://linkedin.com/in/kellygermano"
+    ],
+    "description": "Ingeniera de Software especializada en optimización logística y analítica de datos."
+  }
+  </script>
 </head>
 
 <body>
@@ -49,22 +90,41 @@
       </div>
 
       <div class="container" style="position: relative; z-index: 1;">
-        <div style="max-width: 700px;">
-          <p
-            style="color: var(--brand-primary); font-weight: 600; margin-bottom: 16px; display: inline-block; padding: 6px 12px; background: rgba(59,130,246,0.1); border-radius: 20px; font-size: 0.85rem;">
-            Disponible para nuevos retos
-          </p>
-          <h1 class="text-gradient" style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">
-            Datos que impulsan<br>decisiones inteligentes.
-          </h1>
-          <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 600px;">
-            Soy <strong>Kelly Germano</strong>, Ingeniera de Software especializada en optimización logística y
-            analítica de datos. Transformo complejidad operativa en dashboards claros y eficientes.
-          </p>
-          <div style="display: flex; gap: 16px;">
-            <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
-            <a href="cv/Kelly_Germano_CV.pdf" target="_blank" class="btn btn-outline">Descargar CV</a>
+        <div class="hero-grid">
+
+          <!-- Text Column -->
+          <div style="max-width: 600px;">
+            <p
+              style="color: var(--brand-primary); font-weight: 600; margin-bottom: 16px; display: inline-block; padding: 6px 12px; background: rgba(59,130,246,0.1); border-radius: 20px; font-size: 0.85rem;">
+              Disponible para nuevos retos
+            </p>
+            <h1 class="text-gradient" style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">
+              Datos que impulsan<br>decisiones inteligentes.
+            </h1>
+            <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 500px;">
+              Soy <strong>Kelly Germano</strong>, Ingeniera de Software especializada en optimización logística y
+              analítica de datos. Transformo complejidad operativa en dashboards claros y eficientes.
+            </p>
+            <div class="hero-actions">
+              <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+              <a href="cv/Kelly_Germano_CV.pdf" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline">Descargar CV</a>
+            </div>
           </div>
+
+          <!-- Image Column -->
+          <div style="display: flex; justify-content: center; position: relative;">
+            <!-- Glow behind image -->
+            <div
+              style="position: absolute; width: 350px; height: 350px; background: var(--brand-glow); filter: blur(80px); opacity: 0.4; border-radius: 50%; z-index: -1;">
+            </div>
+
+            <img src="images/profile_2.jpeg" alt="Kelly Germano"
+              style="width: 380px; height: 480px; object-fit: cover; border-radius: 24px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.3); transform: rotate(3deg); transition: transform 0.3s ease;"
+              onmouseover="this.style.transform='rotate(0deg) scale(1.02)'"
+              onmouseout="this.style.transform='rotate(3deg) scale(1)'">
+          </div>
+
         </div>
       </div>
     </section>
@@ -187,7 +247,7 @@
               Profesional</h2>
             <p style="color: var(--text-secondary); margin-bottom: 24px;">Mi trayectoria aportando valor en empresas
               tecnológicas y de logística.</p>
-            <a href="cv/Kelly_Germano_CV.pdf" target="_blank" class="btn btn-outline"
+            <a href="cv/Kelly_Germano_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline"
               style="font-size: 0.9rem;">Descargar CV Completo</a>
           </div>
 
@@ -250,7 +310,8 @@
         </p>
         <div style="display: flex; gap: 16px; justify-content: center;">
           <a href="mailto:jobs@kellygermano.com" class="btn btn-primary">jobs@kellygermano.com</a>
-          <a href="https://linkedin.com/in/kellygermano" target="_blank" class="btn btn-outline">LinkedIn</a>
+          <a href="https://linkedin.com/in/kellygermano" target="_blank" rel="noopener noreferrer"
+            class="btn btn-outline">LinkedIn</a>
         </div>
       </div>
     </section>
