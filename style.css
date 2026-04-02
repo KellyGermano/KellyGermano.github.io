@@ -345,7 +345,7 @@ footer {
 }
 
 
-/* Projects Section */
+/* Projects Section - Renovated Design */
 .section-header {
     margin-bottom: 60px;
 }
@@ -362,107 +362,143 @@ footer {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
 }
 
-@media (max-width: 480px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .project-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: #0f0f0f;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-md);
     padding: 32px;
-    /* Transition defined in previous step */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .card-header {
-    margin-bottom: 24px;
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
-.project-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+.project-icon-wrapper {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.icon-blue {
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--brand-primary);
-}
-
-.icon-orange {
-    background: rgba(249, 115, 22, 0.1);
-    color: var(--brand-secondary);
-}
-
-.icon-purple {
-    background: rgba(168, 85, 247, 0.1);
-    color: #a855f7;
-}
-
-.project-tag {
-    font-size: 0.75rem;
-    background: #1e1e1e;
-    padding: 4px 10px;
+.project-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
     border-radius: 99px;
-    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
 }
 
 .project-title {
     font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-primary);
 }
 
 .project-desc {
     color: var(--text-secondary);
-    margin-bottom: 24px;
     font-size: 0.95rem;
-}
-
-.project-list {
-    list-style: none;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
     margin-bottom: 24px;
-    border-left: 2px solid var(--glass-border);
-    padding-left: 16px;
+    line-height: 1.5;
 }
 
-.project-list li {
-    margin-bottom: 8px;
+.project-features {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.project-features li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-features li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .project-link {
     color: var(--text-primary);
+    text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    text-decoration: none;
-    border-bottom: 1px solid;
-    /* Color defined inline previously, moving to specific classes or keeping inline style for color ONLY if dynamic, but here fixed classes are better */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    width: fit-content;
+    align-self: flex-start;
 }
 
-.link-blue {
-    border-color: var(--brand-primary);
+.project-link span {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: inherit;
 }
 
-.link-orange {
-    border-color: var(--brand-secondary);
+.project-link:hover {
+    gap: 12px;
+    opacity: 0.8;
 }
 
-.link-purple {
-    border-color: #a855f7;
+/* Theme Variations */
+.theme-blue .project-icon-wrapper {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
 }
+.theme-blue .project-features li::before { color: #3b82f6; }
+.theme-blue .project-link span { border-color: #3b82f6; }
+
+.theme-orange .project-icon-wrapper {
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+}
+.theme-orange .project-features li::before { color: #f97316; }
+.theme-orange .project-link span { border-color: #f97316; }
+
+.theme-purple .project-icon-wrapper {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+}
+.theme-purple .project-features li::before { color: #a855f7; }
+.theme-purple .project-link span { border-color: #a855f7; }
+
+.theme-green .project-icon-wrapper {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+.theme-green .project-features li::before { color: #10b981; }
+.theme-green .project-link span { border-color: #10b981; }
 
 
 /* Experience Section Enhanced */

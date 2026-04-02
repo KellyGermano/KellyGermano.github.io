@@ -133,229 +133,98 @@
         <div class="project-grid">
 
           <!-- Card 1: ETL Pipeline -->
-          <article class="project-card">
+          <article class="project-card theme-blue">
             <div class="card-header">
-              <div class="project-icon-box icon-blue">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                  </path>
+              <div class="project-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                 </svg>
               </div>
-              <div class="project-tags">
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Python</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Airflow</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Docker</span>
-              </div>
+              <span class="project-badge">Python / Data</span>
             </div>
-
+            
             <h3 class="project-title">Pipeline ETL & Orquestación</h3>
+            <p class="project-desc">Las empresas necesitan consolidar datos de múltiples fuentes (APIs, bases de datos) pero los procesos manuales son lentos, propensos a errores y difíciles de escalar.</p>
+            
+            <ul class="project-features">
+              <li>Orquestación con Apache Airflow</li>
+              <li>Validación automática de calidad</li>
+              <li>Entorno dockerizado reproducible</li>
+            </ul>
 
-            <div class="project-content">
-              <h4 class="project-section-title">El Problema</h4>
-              <p class="project-problem">
-                Las empresas necesitan consolidar datos de múltiples fuentes (APIs, bases de datos) pero los procesos
-                manuales son lentos, propensos a errores y difíciles de escalar.
-              </p>
-
-              <h4 class="project-section-title">Solución</h4>
-              <ul class="project-solution-list">
-                <li>Orquestación robusta con Apache Airflow (12 DAGs).</li>
-                <li>Validación automática de calidad de datos.</li>
-                <li>Entorno completamente dockerizado y reproducible.</li>
-              </ul>
-
-              <h4 class="project-section-title">Resultados</h4>
-              <div class="project-metrics">
-                <div class="metric-item">
-                  <span class="metric-value">150K+</span>
-                  <span class="metric-label">Registros/día</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">99.8%</span>
-                  <span class="metric-label">Uptime</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">-95%</span>
-                  <span class="metric-label">Tiempo manual</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary btn-sm">Ver Demo</a>
-              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
-              <a href="#" class="btn btn-outline btn-sm">Docs</a>
-            </div>
+            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
           </article>
 
-          <!-- Card 2: Dashboard Real-Time (Moved from pos 3 to 2) -->
-          <article class="project-card">
+          <!-- Card 2: Dashboard Real-Time -->
+          <article class="project-card theme-purple">
             <div class="card-header">
-              <div class="project-icon-box icon-purple">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <div class="project-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="3" y1="9" x2="21" y2="9"></line>
                   <line x1="9" y1="21" x2="9" y2="9"></line>
                 </svg>
               </div>
-              <div class="project-tags">
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">FastAPI</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">React</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">WebSockets</span>
-              </div>
+              <span class="project-badge">SQL / BI</span>
             </div>
+            
+            <h3 class="project-title">Dashboard en Tiempo Real</h3>
+            <p class="project-desc">Los equipos operativos necesitan monitorear KPIs críticos pero los reportes estáticos quedan obsoletos rápidamente, retrasando la toma de decisiones.</p>
+            
+            <ul class="project-features">
+              <li>WebSockets para actualizaciones live</li>
+              <li>Visualizaciones interactivas drill-down</li>
+              <li>Alertas automáticas configurables</li>
+            </ul>
 
-            <h3 class="project-title">Dashboard Analítico en Tiempo Real</h3>
-
-            <div class="project-content">
-              <h4 class="project-section-title">El Problema</h4>
-              <p class="project-problem">
-                Los equipos operativos necesitan monitorear KPIs críticos pero los reportes estáticos quedan obsoletos
-                rápidamente, retrasando la toma de decisiones.
-              </p>
-
-              <h4 class="project-section-title">Solución</h4>
-              <ul class="project-solution-list">
-                <li>WebSockets para actualizaciones live (&lt;2s latencia).</li>
-                <li>Visualizaciones interactivas con drill-down.</li>
-                <li>Alertas automáticas por umbrales configurables.</li>
-              </ul>
-
-              <h4 class="project-section-title">Resultados</h4>
-              <div class="project-metrics">
-                <div class="metric-item">
-                  <span class="metric-value">&lt;1.5s</span>
-                  <span class="metric-label">Latencia</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">50+</span>
-                  <span class="metric-label">Usuarios</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">-80%</span>
-                  <span class="metric-label">Tiempo análisis</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary btn-sm">Demo Live</a>
-              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
-              <a href="#" class="btn btn-outline btn-sm">Arquitectura</a>
-            </div>
+            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
           </article>
 
-          <!-- Card 3: Chatbot Analítico (Moved from pos 2 to 3) -->
-          <article class="project-card">
+          <!-- Card 3: Chatbot Analítico -->
+          <article class="project-card theme-orange">
             <div class="card-header">
-              <div class="project-icon-box icon-orange">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <div class="project-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
               </div>
-              <div class="project-tags">
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">LangChain</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">OpenAI</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">FastAPI</span>
-              </div>
+              <span class="project-badge">AI / LLM</span>
             </div>
-
+            
             <h3 class="project-title">Chatbot Analítico Conversacional</h3>
+            <p class="project-desc">Los equipos de negocio necesitan insights de datos pero dependen de analistas para escribir SQL, creando cuellos de botella operativos.</p>
+            
+            <ul class="project-features">
+              <li>Preguntas en lenguaje natural (GPT-4)</li>
+              <li>Generación automática de SQL optimizado</li>
+              <li>Visualizaciones dinámicas integradas</li>
+            </ul>
 
-            <div class="project-content">
-              <h4 class="project-section-title">El Problema</h4>
-              <p class="project-problem">
-                Los equipos de negocio necesitan insights de datos pero dependen de analistas para escribir SQL, creando
-                cuellos de botella.
-              </p>
-
-              <h4 class="project-section-title">Solución</h4>
-              <ul class="project-solution-list">
-                <li>Interpreta preguntas en lenguaje natural (GPT-4).</li>
-                <li>Genera y ejecuta SQL optimizado automáticamente.</li>
-                <li>Responde en lenguaje natural con visualizaciones.</li>
-              </ul>
-
-              <h4 class="project-section-title">Resultados</h4>
-              <div class="project-metrics">
-                <div class="metric-item">
-                  <span class="metric-value">85%</span>
-                  <span class="metric-label">Accuracy SQL</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">&lt;3s</span>
-                  <span class="metric-label">Respuesta</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">-70%</span>
-                  <span class="metric-label">Tiempo análisis</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary btn-sm">Demo en Vivo</a>
-              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
-              <a href="#" class="btn btn-outline btn-sm">Video</a>
-            </div>
+            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
           </article>
 
-          <!-- Card 4: MLOps Pipeline (New) -->
-          <article class="project-card">
+          <!-- Card 4: Sistema de Predicción -->
+          <article class="project-card theme-green">
             <div class="card-header">
-              <div class="project-icon-box icon-blue">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <div class="project-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
                   <path d="M12 6v6l4 2"></path>
                 </svg>
               </div>
-              <div class="project-tags">
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Python</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">MLflow</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Docker</span>
-                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">CI/CD</span>
-              </div>
+              <span class="project-badge">ML / MLOps</span>
             </div>
+            
+            <h3 class="project-title">Sistema de Predicción de Demanda</h3>
+            <p class="project-desc">La variabilidad en la demanda de pedidos dificulta la planificación logística, generando sobrecostes operativos y retrasos en entregas.</p>
+            
+            <ul class="project-features">
+              <li>Entrenamiento continuo con GitHub Actions</li>
+              <li>Registro de modelos con MLflow</li>
+              <li>API de inferencia escalable en Docker</li>
+            </ul>
 
-            <h3 class="project-title">Sistema de Predicción & MLOps</h3>
-
-            <div class="project-content">
-              <h4 class="project-section-title">El Problema</h4>
-              <p class="project-problem">
-                La variabilidad en la demanda de pedidos dificulta la planificación logística, generando sobrecostes
-                operativos y retrasos en entregas.
-              </p>
-
-              <h4 class="project-section-title">Solución</h4>
-              <ul class="project-solution-list">
-                <li>Pipeline de entrenamiento continuo (CT) con GitHub Actions.</li>
-                <li>Experiment tracking y registro de modelos con MLflow.</li>
-                <li>API de inferencia escalable contenerizada con Docker.</li>
-              </ul>
-
-              <h4 class="project-section-title">Resultados</h4>
-              <div class="project-metrics">
-                <div class="metric-item">
-                  <span class="metric-value">90%</span>
-                  <span class="metric-label">Accuracy</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">-30%</span>
-                  <span class="metric-label">Costes flota</span>
-                </div>
-                <div class="metric-item">
-                  <span class="metric-value">Auto</span>
-                  <span class="metric-label">Retraining</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary btn-sm">Ver Demo</a>
-              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
-              <a href="#" class="btn btn-outline btn-sm">Case Study</a>
-            </div>
+            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
           </article>
 
         </div>
