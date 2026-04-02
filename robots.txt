@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kellygermano.github.io/sitemap.xml
+Sitemap: https://kellygermano.com/sitemap.xml
