@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth Scroll for Nav Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '') return; // Ignore empty or top-links
+            
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -52,5 +55,69 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuTrigger.textContent = '☰';
             });
         });
+    }
+
+    // Modal System
+    const cards = document.querySelectorAll('.project-card');
+    const modals = document.querySelectorAll('.modal-overlay');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    // Open Modal
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // If the click is on a link, prevent default to avoid '#' navigation
+            if (e.target.closest('a')) {
+                e.preventDefault();
+            }
+            
+            const targetId = card.getAttribute('data-modal-target');
+            const modal = document.getElementById(targetId);
+            if (modal) {
+                openModal(modal);
+            }
+        });
+    });
+
+    // Close Modal - X Button
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents card click if applicable
+            const modal = btn.closest('.modal-overlay');
+            closeModal(modal);
+        });
+    });
+
+    // Close Modal - Click Outside (Overlay)
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
+        });
+    });
+
+    // Close Modal - Keyboard (Esc)
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const activeModal = document.querySelector('.modal-overlay.active');
+            if (activeModal) {
+                closeModal(activeModal);
+            }
+        }
+    });
+
+    function openModal(modal) {
+        modal.classList.add('active');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal(modal) {
+        modal.classList.remove('active');
+        // Small delay to allow fade-out animation before removing scroll lock
+        setTimeout(() => {
+            if (!document.querySelector('.modal-overlay.active')) {
+                document.body.classList.remove('modal-open');
+            }
+        }, 300);
     }
 });

@@ -107,11 +107,9 @@
           </div>
 
           <!-- Image Column -->
-          <div style="display: flex; justify-content: center; position: relative;">
+          <div class="hero-image-col">
             <!-- Glow behind image -->
-            <div
-              style="position: absolute; width: 350px; height: 350px; background: var(--brand-glow); filter: blur(80px); opacity: 0.4; border-radius: 50%; z-index: -1;">
-            </div>
+            <div class="image-glow"></div>
 
             <img src="images/profile_2.jpeg" alt="Kelly Germano" class="profile-image">
           </div>
@@ -131,9 +129,73 @@
 
         <!-- Project Grid -->
         <div class="project-grid">
+          <!-- Card 1: Chatbot Analítico (AI/LLM) -->
+          <article class="project-card theme-orange" data-modal-target="modal-chatbot">
+            <div class="card-header">
+              <div class="project-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <span class="project-badge">AI / LLM</span>
+            </div>
+            
+            <h3 class="project-title">Chatbot Analítico Conversacional</h3>
+            <p class="project-desc">Los equipos de negocio necesitan insights de datos pero dependen de analistas para escribir SQL, creando cuellos de botella operativos.</p>
+            
+            <ul class="project-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Preguntas en lenguaje natural (GPT-4)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Generación automática de SQL optimizado</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Visualizaciones dinámicas integradas</span>
+              </li>
+            </ul>
 
-          <!-- Card 1: ETL Pipeline -->
-          <article class="project-card theme-blue">
+            <div class="project-link"><span>Ver detalles</span> →</div>
+          </article>
+
+          <!-- Card 2: Sistema de Predicción (ML/MLOps) -->
+          <article class="project-card theme-green" data-modal-target="modal-mlops">
+            <div class="card-header">
+              <div class="project-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <span class="project-badge">ML / MLOps</span>
+            </div>
+            
+            <h3 class="project-title">Sistema de Predicción de Demanda</h3>
+            <p class="project-desc">La variabilidad en la demanda de pedidos dificulta la planificación logística, generando sobrecostes operativos y retrasos en entregas.</p>
+            
+            <ul class="project-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Entrenamiento continuo con GitHub Actions</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Registro de modelos con MLflow</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>API de inferencia escalable en Docker</span>
+              </li>
+            </ul>
+
+            <div class="project-link"><span>Ver detalles</span> →</div>
+          </article>
+
+          <!-- Card 3: ETL Pipeline (Python/Data) -->
+          <article class="project-card theme-blue" data-modal-target="modal-etl">
             <div class="card-header">
               <div class="project-icon-wrapper">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -147,16 +209,25 @@
             <p class="project-desc">Las empresas necesitan consolidar datos de múltiples fuentes (APIs, bases de datos) pero los procesos manuales son lentos, propensos a errores y difíciles de escalar.</p>
             
             <ul class="project-features">
-              <li>Orquestación con Apache Airflow</li>
-              <li>Validación automática de calidad</li>
-              <li>Entorno dockerizado reproducible</li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Orquestación con Apache Airflow</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Validación automática de calidad</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Entorno dockerizado reproducible</span>
+              </li>
             </ul>
 
-            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
+            <div class="project-link"><span>Ver detalles</span> →</div>
           </article>
 
-          <!-- Card 2: Dashboard Real-Time -->
-          <article class="project-card theme-purple">
+          <!-- Card 4: Dashboard Real-Time (SQL/BI) -->
+          <article class="project-card theme-purple" data-modal-target="modal-dashboard">
             <div class="card-header">
               <div class="project-icon-wrapper">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -172,67 +243,30 @@
             <p class="project-desc">Los equipos operativos necesitan monitorear KPIs críticos pero los reportes estáticos quedan obsoletos rápidamente, retrasando la toma de decisiones.</p>
             
             <ul class="project-features">
-              <li>WebSockets para actualizaciones live</li>
-              <li>Visualizaciones interactivas drill-down</li>
-              <li>Alertas automáticas configurables</li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>WebSockets para actualizaciones live</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Visualizaciones interactivas drill-down</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Alertas automáticas configurables</span>
+              </li>
             </ul>
 
-            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
+            <div class="project-link"><span>Ver detalles</span> →</div>
           </article>
-
-          <!-- Card 3: Chatbot Analítico -->
-          <article class="project-card theme-orange">
-            <div class="card-header">
-              <div class="project-icon-wrapper">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
-              </div>
-              <span class="project-badge">AI / LLM</span>
-            </div>
-            
-            <h3 class="project-title">Chatbot Analítico Conversacional</h3>
-            <p class="project-desc">Los equipos de negocio necesitan insights de datos pero dependen de analistas para escribir SQL, creando cuellos de botella operativos.</p>
-            
-            <ul class="project-features">
-              <li>Preguntas en lenguaje natural (GPT-4)</li>
-              <li>Generación automática de SQL optimizado</li>
-              <li>Visualizaciones dinámicas integradas</li>
-            </ul>
-
-            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
-          </article>
-
-          <!-- Card 4: Sistema de Predicción -->
-          <article class="project-card theme-green">
-            <div class="card-header">
-              <div class="project-icon-wrapper">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-              </div>
-              <span class="project-badge">ML / MLOps</span>
-            </div>
-            
-            <h3 class="project-title">Sistema de Predicción de Demanda</h3>
-            <p class="project-desc">La variabilidad en la demanda de pedidos dificulta la planificación logística, generando sobrecostes operativos y retrasos en entregas.</p>
-            
-            <ul class="project-features">
-              <li>Entrenamiento continuo con GitHub Actions</li>
-              <li>Registro de modelos con MLflow</li>
-              <li>API de inferencia escalable en Docker</li>
-            </ul>
-
-            <a href="#" class="project-link"><span>Ver detalles</span> →</a>
-          </article>
+        </div>
 
         </div>
       </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experiencia" style="background: var(--bg-secondary);">
+    <section id="experiencia" class="section-secondary">
       <div class="container">
         <div class="experience-grid">
           <div>
@@ -263,20 +297,92 @@
     </section>
 
     <!-- About/Skills Section Compact -->
+    <!-- About/Skills Section Compact -->
     <section id="sobre-mi">
       <div class="container">
         <div class="tech-container">
           <h2 class="tech-title">Stack Tecnológico</h2>
-          <div class="tech-grid">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">R</span>
-            <span class="tech-badge">SQL</span>
-            <span class="tech-badge">Pandas
-              & Scikit-learn</span>
-            <span class="tech-badge">Power
-              BI</span>
-            <span class="tech-badge">Git</span>
-            <span class="tech-badge">Flask</span>
+          
+          <div class="stack-group">
+            <span class="group-label">LENGUAJES & AI</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path><path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path><path d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4"></path></svg>
+                <span>Python</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                <span>SQL</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path></svg>
+                <span>R</span>
+              </div>
+              <div class="tech-badge theme-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 12l10 5 10-5"></path></svg>
+                <span>LangChain</span>
+              </div>
+              <div class="tech-badge theme-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+                <span>OpenAI / LLM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span class="group-label">DATA & FRAMEWORKS</span>
+            <div class="tech-grid">
+              <div class="tech-badge theme-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+                <span>Pandas</span>
+              </div>
+              <div class="tech-badge theme-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                <span>Scikit-Learn</span>
+              </div>
+              <div class="tech-badge theme-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>MLflow</span>
+              </div>
+              <div class="tech-badge theme-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path></svg>
+                <span>dbt</span>
+              </div>
+              <div class="tech-badge theme-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                <span>FastAPI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span class="group-label">INFRA & VIZ</span>
+            <div class="tech-grid">
+              <div class="tech-badge theme-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2"></path></svg>
+                <span>Airflow</span>
+              </div>
+              <div class="tech-badge theme-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect></svg>
+                <span>Docker</span>
+              </div>
+              <div class="tech-badge theme-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="tech-badge theme-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>GitHub Actions</span>
+              </div>
+              <div class="tech-badge theme-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="21" x2="12" y2="9"></line><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                <span>Power BI</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                <span>Git</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -304,6 +410,359 @@
       <p>&copy; <span id="year"></span> Kelly Germano. Diseñado y Desarrollado.</p>
     </div>
   </footer>
+
+  <!-- Project Modals Container -->
+  <div id="modal-container">
+    
+    <!-- Modal 1: AI/LLM -->
+    <div class="modal-overlay theme-orange" id="modal-chatbot">
+      <div class="modal-content glass">
+        <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+        
+        <header class="modal-header">
+          <h2 class="modal-title">Chatbot Analítico Conversacional</h2>
+          <span class="project-badge">AI / LLM</span>
+        </header>
+
+        <section class="modal-section">
+          <h3>El Problema</h3>
+          <p>Los equipos de negocio necesitan insights de datos pero dependen de analistas para escribir SQL, creando cuellos de botella operativos.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Mi Solución</h3>
+          <p><!-- TODO: Añadir descripción en primera persona -->[Añadir descripción en primera persona]</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Stack Técnico</h3>
+          
+          <div class="stack-group">
+            <span class="group-label">CORE & AI</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path><path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path><path d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4"></path></svg>
+                <span>Python</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                <span>LangChain</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+                <span>OpenAI GPT-4</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span class="group-label">BACKEND & DATA</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                <span>FastAPI</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>SQLAlchemy</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultados & Métricas</h3>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 1]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 2]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Imagen del Proyecto</h3>
+          <div class="project-visual-placeholder">
+            <!-- TODO: [Añadir captura o GIF aquí] -->
+            <span>[Imagen/GIF del proyecto - Placeholder]</span>
+          </div>
+        </section>
+
+        <footer class="modal-footer">
+          <!-- TODO: Actualizar link de GitHub -->
+          <a href="#" class="btn btn-outline">Ver en GitHub</a>
+          <!-- TODO: Actualizar link de Demo -->
+          <a href="#" class="btn btn-primary">Ver Demo</a>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Modal 2: ML/MLOps -->
+    <div class="modal-overlay theme-green" id="modal-mlops">
+      <div class="modal-content glass">
+        <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+        
+        <header class="modal-header">
+          <h2 class="modal-title">Sistema de Predicción de Demanda</h2>
+          <span class="project-badge">ML / MLOps</span>
+        </header>
+
+        <section class="modal-section">
+          <h3>El Problema</h3>
+          <p>La variabilidad en la demanda de pedidos dificulta la planificación logística, generando sobrecostes operativos y retrasos en entregas.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Mi Solución</h3>
+          <p><!-- TODO: Añadir descripción en primera persona -->[Añadir descripción en primera persona]</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Stack Técnico</h3>
+
+          <div class="stack-group">
+            <span class="group-label">ML & EXPERIMENTACIÓN</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path><path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path><path d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4"></path></svg>
+                <span>Python</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                <span>Scikit-learn</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>MLflow</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span class="group-label">MLOPS & INFRA</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                <span>Docker</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultados & Métricas</h3>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 1]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 2]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Imagen del Proyecto</h3>
+          <div class="project-visual-placeholder">
+            <!-- TODO: [Añadir captura o GIF aquí] -->
+            <span>[Imagen/GIF del proyecto - Placeholder]</span>
+          </div>
+        </section>
+
+        <footer class="modal-footer">
+          <!-- TODO: Actualizar link de GitHub -->
+          <a href="#" class="btn btn-outline">Ver en GitHub</a>
+          <!-- TODO: Actualizar link de Demo -->
+          <a href="#" class="btn btn-primary">Ver Demo</a>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Modal 3: Python/Data -->
+    <div class="modal-overlay theme-blue" id="modal-etl">
+      <div class="modal-content glass">
+        <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+        
+        <header class="modal-header">
+          <h2 class="modal-title">Pipeline ETL & Orquestación</h2>
+          <span class="project-badge">Python / Data</span>
+        </header>
+
+        <section class="modal-section">
+          <h3>El Problema</h3>
+          <p>Las empresas necesitan consolidar datos de múltiples fuentes (APIs, bases de datos) pero los procesos manuales son lentos, propensos a errores y difíciles de escalar.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Mi Solución</h3>
+          <p><!-- TODO: Añadir descripción en primera persona -->[Añadir descripción en primera persona]</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Stack Técnico</h3>
+
+          <div class="stack-group">
+            <span class="group-label">PROCESAMIENTO</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"></path><path d="M12 15h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3"></path><path d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4"></path></svg>
+                <span>Python</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+                <span>Pandas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span class="group-label">ORQUESTACIÓN & DATA</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                <span>Apache Airflow</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect></svg>
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultados & Métricas</h3>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 1]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 2]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Imagen del Proyecto</h3>
+          <div class="project-visual-placeholder">
+            <!-- TODO: [Añadir captura o GIF aquí] -->
+            <span>[Imagen/GIF del proyecto - Placeholder]</span>
+          </div>
+        </section>
+
+        <footer class="modal-footer">
+          <!-- TODO: Actualizar link de GitHub -->
+          <a href="#" class="btn btn-outline">Ver en GitHub</a>
+          <!-- TODO: Actualizar link de Demo -->
+          <a href="#" class="btn btn-primary">Ver Demo</a>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Modal 4: SQL/BI -->
+    <div class="modal-overlay theme-purple" id="modal-dashboard">
+      <div class="modal-content glass">
+        <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+        
+        <header class="modal-header">
+          <h2 class="modal-title">Dashboard en Tiempo Real</h2>
+          <span class="project-badge">SQL / BI</span>
+        </header>
+
+        <section class="modal-section">
+          <h3>El Problema</h3>
+          <p>Los equipos operativos necesitan monitorear KPIs críticos pero los reportes estáticos quedan obsoletos rápidamente, retrasando la toma de decisiones.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Mi Solución</h3>
+          <p><!-- TODO: Añadir descripción en primera persona -->[Añadir descripción en primera persona]</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Stack Técnico</h3>
+
+          <div class="stack-group">
+            <span class="group-label">ANÁLISIS & BI</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                <span>SQL</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="21" x2="12" y2="9"></line><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                <span>Power BI</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 12l10 5 10-5"></path><path d="M2 17l10 5 10-5"></path></svg>
+                <span>dbt</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <span class="group-label">API & REAL-TIME</span>
+            <div class="tech-grid">
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                <span>FastAPI</span>
+              </div>
+              <div class="tech-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5v14M12 5l-4 4M12 19l4-4"></path></svg>
+                <span>WebSockets</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Resultados & Métricas</h3>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 1]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">[Métrica 2]</span>
+              <span class="metric-label">[Añadir métrica real]</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal-section">
+          <h3>Imagen del Proyecto</h3>
+          <div class="project-visual-placeholder">
+            <!-- TODO: [Añadir captura o GIF aquí] -->
+            <span>[Imagen/GIF del proyecto - Placeholder]</span>
+          </div>
+        </section>
+
+        <footer class="modal-footer">
+          <!-- TODO: Actualizar link de GitHub -->
+          <a href="#" class="btn btn-outline">Ver en GitHub</a>
+          <!-- TODO: Actualizar link de Demo -->
+          <a href="#" class="btn btn-primary">Ver Demo</a>
+        </footer>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 
