@@ -32,7 +32,8 @@
 
   <!-- Security -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    content="default-src 'self' https:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,26 +83,23 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="inicio"
-      style="min-height: 85vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+    <section id="inicio" class="hero-section">
       <!-- Background Glow Effect -->
-      <div
-        style="position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; pointer-events: none;">
+      <div class="hero-bg-glow">
       </div>
 
-      <div class="container" style="position: relative; z-index: 1;">
+      <div class="container hero-content">
         <div class="hero-grid">
 
           <!-- Text Column -->
-          <div style="max-width: 600px;">
-            <p
-              style="color: var(--brand-primary); font-weight: 600; margin-bottom: 16px; display: inline-block; padding: 6px 12px; background: rgba(59,130,246,0.1); border-radius: 20px; font-size: 0.85rem;">
+          <div class="hero-text-column">
+            <p class="availability-badge">
               Disponible para nuevos retos
             </p>
-            <h1 class="text-gradient" style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">
+            <h1 class="text-gradient hero-title">
               Datos que impulsan<br>decisiones inteligentes.
             </h1>
-            <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 500px;">
+            <p class="hero-description">
               Soy <strong>Kelly Germano</strong>, Ingeniera de Software especializada en optimización logística y
               analítica de datos. Transformo complejidad operativa en dashboards claros y eficientes.
             </p>
@@ -119,10 +117,7 @@
               style="position: absolute; width: 350px; height: 350px; background: var(--brand-glow); filter: blur(80px); opacity: 0.4; border-radius: 50%; z-index: -1;">
             </div>
 
-            <img src="images/profile_2.jpeg" alt="Kelly Germano"
-              style="width: 380px; height: 480px; object-fit: cover; border-radius: 24px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.3); transform: rotate(3deg); transition: transform 0.3s ease;"
-              onmouseover="this.style.transform='rotate(0deg) scale(1.02)'"
-              onmouseout="this.style.transform='rotate(3deg) scale(1)'">
+            <img src="images/profile_2.jpeg" alt="Kelly Germano" class="profile-image">
           </div>
 
         </div>
@@ -132,106 +127,239 @@
     <!-- Projects Section -->
     <section id="proyectos">
       <div class="container">
-        <div style="margin-bottom: 60px;">
-          <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">Proyectos
+        <div class="section-header">
+          <h2 class="text-gradient section-title">Proyectos
             Destacados</h2>
-          <p style="color: var(--text-secondary);">Soluciones reales a problemas de negocio complejos.</p>
+          <p class="section-subtitle">Soluciones reales a problemas de negocio complejos.</p>
         </div>
 
         <!-- Project Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px;">
+        <div class="project-grid">
 
-          <!-- Card 1 -->
-          <article
-            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 32px; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div style="margin-bottom: 24px; display: flex; align-items: flex-start; justify-content: space-between;">
-              <div
-                style="width: 48px; height: 48px; background: rgba(59,130,246,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
+          <!-- Card 1: ETL Pipeline -->
+          <article class="project-card">
+            <div class="card-header">
+              <div class="project-icon-box icon-blue">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path
                     d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
                   </path>
                 </svg>
               </div>
-              <span
-                style="font-size: 0.75rem; background: #1e1e1e; padding: 4px 10px; border-radius: 99px; border: 1px solid #333;">Python
-                / ML</span>
+              <div class="project-tags">
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Python</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Airflow</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Docker</span>
+              </div>
             </div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Predicción de Demanda</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
-              Modelo predictivo para anticipar picos de pedidos en logística de última milla. Optimización de flota
-              basada en datos históricos.
-            </p>
-            <ul
-              style="list-style: none; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; border-left: 2px solid var(--glass-border); padding-left: 16px;">
-              <li style="margin-bottom: 8px;">• Reducción de variabilidad</li>
-              <li style="margin-bottom: 8px;">• Planificación eficiente</li>
-            </ul>
-            <a href="#"
-              style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--brand-primary);">Ver
-              detalles &rarr;</a>
+
+            <h3 class="project-title">Pipeline ETL & Orquestación</h3>
+
+            <div class="project-content">
+              <h4 class="project-section-title">El Problema</h4>
+              <p class="project-problem">
+                Las empresas necesitan consolidar datos de múltiples fuentes (APIs, bases de datos) pero los procesos
+                manuales son lentos, propensos a errores y difíciles de escalar.
+              </p>
+
+              <h4 class="project-section-title">Solución</h4>
+              <ul class="project-solution-list">
+                <li>Orquestación robusta con Apache Airflow (12 DAGs).</li>
+                <li>Validación automática de calidad de datos.</li>
+                <li>Entorno completamente dockerizado y reproducible.</li>
+              </ul>
+
+              <h4 class="project-section-title">Resultados</h4>
+              <div class="project-metrics">
+                <div class="metric-item">
+                  <span class="metric-value">150K+</span>
+                  <span class="metric-label">Registros/día</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">99.8%</span>
+                  <span class="metric-label">Uptime</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">-95%</span>
+                  <span class="metric-label">Tiempo manual</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Ver Demo</a>
+              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+              <a href="#" class="btn btn-outline btn-sm">Docs</a>
+            </div>
           </article>
 
-          <!-- Card 2 -->
-          <article
-            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 32px; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div style="margin-bottom: 24px; display: flex; align-items: flex-start; justify-content: space-between;">
-              <div
-                style="width: 48px; height: 48px; background: rgba(249, 115, 22, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--brand-secondary);">
+          <!-- Card 2: Dashboard Real-Time (Moved from pos 3 to 2) -->
+          <article class="project-card">
+            <div class="card-header">
+              <div class="project-icon-box icon-purple">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
                 </svg>
               </div>
-              <span
-                style="font-size: 0.75rem; background: #1e1e1e; padding: 4px 10px; border-radius: 99px; border: 1px solid #333;">Automation</span>
+              <div class="project-tags">
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">FastAPI</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">React</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">WebSockets</span>
+              </div>
             </div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Reporting Automatizado</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
-              Scripting en Python para generar informes PDF/Excel automáticos y distribuirlos por email, eliminando
-              tareas manuales repetitivas.
-            </p>
-            <ul
-              style="list-style: none; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; border-left: 2px solid var(--glass-border); padding-left: 16px;">
-              <li style="margin-bottom: 8px;">• Ahorro 60% tiempo/semana</li>
-              <li style="margin-bottom: 8px;">• Cero errores humanos</li>
-            </ul>
-            <a href="#"
-              style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--brand-secondary);">Ver
-              detalles &rarr;</a>
+
+            <h3 class="project-title">Dashboard Analítico en Tiempo Real</h3>
+
+            <div class="project-content">
+              <h4 class="project-section-title">El Problema</h4>
+              <p class="project-problem">
+                Los equipos operativos necesitan monitorear KPIs críticos pero los reportes estáticos quedan obsoletos
+                rápidamente, retrasando la toma de decisiones.
+              </p>
+
+              <h4 class="project-section-title">Solución</h4>
+              <ul class="project-solution-list">
+                <li>WebSockets para actualizaciones live (&lt;2s latencia).</li>
+                <li>Visualizaciones interactivas con drill-down.</li>
+                <li>Alertas automáticas por umbrales configurables.</li>
+              </ul>
+
+              <h4 class="project-section-title">Resultados</h4>
+              <div class="project-metrics">
+                <div class="metric-item">
+                  <span class="metric-value">&lt;1.5s</span>
+                  <span class="metric-label">Latencia</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">50+</span>
+                  <span class="metric-label">Usuarios</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">-80%</span>
+                  <span class="metric-label">Tiempo análisis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Demo Live</a>
+              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+              <a href="#" class="btn btn-outline btn-sm">Arquitectura</a>
+            </div>
           </article>
 
-          <!-- Card 3 -->
-          <article
-            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 32px; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div style="margin-bottom: 24px; display: flex; align-items: flex-start; justify-content: space-between;">
-              <div
-                style="width: 48px; height: 48px; background: rgba(168, 85, 247, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #a855f7;">
+          <!-- Card 3: Chatbot Analítico (Moved from pos 2 to 3) -->
+          <article class="project-card">
+            <div class="card-header">
+              <div class="project-icon-box icon-orange">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 20V10"></path>
-                  <path d="M18 20V4"></path>
-                  <path d="M6 20v-4"></path>
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
               </div>
-              <span
-                style="font-size: 0.75rem; background: #1e1e1e; padding: 4px 10px; border-radius: 99px; border: 1px solid #333;">SQL
-                / BI</span>
+              <div class="project-tags">
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">LangChain</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">OpenAI</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">FastAPI</span>
+              </div>
             </div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Dashboard Operativo</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
-              Visualización de KPIs críticos (puntualidad, costes, tiempos) para la toma de decisiones ágil en tiempo
-              real.
-            </p>
-            <ul
-              style="list-style: none; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; border-left: 2px solid var(--glass-border); padding-left: 16px;">
-              <li style="margin-bottom: 8px;">• Visibilidad total</li>
-              <li style="margin-bottom: 8px;">• Insights accionables</li>
-            </ul>
-            <a href="#"
-              style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid #a855f7;">Ver
-              detalles &rarr;</a>
+
+            <h3 class="project-title">Chatbot Analítico Conversacional</h3>
+
+            <div class="project-content">
+              <h4 class="project-section-title">El Problema</h4>
+              <p class="project-problem">
+                Los equipos de negocio necesitan insights de datos pero dependen de analistas para escribir SQL, creando
+                cuellos de botella.
+              </p>
+
+              <h4 class="project-section-title">Solución</h4>
+              <ul class="project-solution-list">
+                <li>Interpreta preguntas en lenguaje natural (GPT-4).</li>
+                <li>Genera y ejecuta SQL optimizado automáticamente.</li>
+                <li>Responde en lenguaje natural con visualizaciones.</li>
+              </ul>
+
+              <h4 class="project-section-title">Resultados</h4>
+              <div class="project-metrics">
+                <div class="metric-item">
+                  <span class="metric-value">85%</span>
+                  <span class="metric-label">Accuracy SQL</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">&lt;3s</span>
+                  <span class="metric-label">Respuesta</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">-70%</span>
+                  <span class="metric-label">Tiempo análisis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Demo en Vivo</a>
+              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+              <a href="#" class="btn btn-outline btn-sm">Video</a>
+            </div>
+          </article>
+
+          <!-- Card 4: MLOps Pipeline (New) -->
+          <article class="project-card">
+            <div class="card-header">
+              <div class="project-icon-box icon-blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <div class="project-tags">
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Python</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">MLflow</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">Docker</span>
+                <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px;">CI/CD</span>
+              </div>
+            </div>
+
+            <h3 class="project-title">Sistema de Predicción & MLOps</h3>
+
+            <div class="project-content">
+              <h4 class="project-section-title">El Problema</h4>
+              <p class="project-problem">
+                La variabilidad en la demanda de pedidos dificulta la planificación logística, generando sobrecostes
+                operativos y retrasos en entregas.
+              </p>
+
+              <h4 class="project-section-title">Solución</h4>
+              <ul class="project-solution-list">
+                <li>Pipeline de entrenamiento continuo (CT) con GitHub Actions.</li>
+                <li>Experiment tracking y registro de modelos con MLflow.</li>
+                <li>API de inferencia escalable contenerizada con Docker.</li>
+              </ul>
+
+              <h4 class="project-section-title">Resultados</h4>
+              <div class="project-metrics">
+                <div class="metric-item">
+                  <span class="metric-value">90%</span>
+                  <span class="metric-label">Accuracy</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">-30%</span>
+                  <span class="metric-label">Costes flota</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value">Auto</span>
+                  <span class="metric-label">Retraining</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Ver Demo</a>
+              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+              <a href="#" class="btn btn-outline btn-sm">Case Study</a>
+            </div>
           </article>
 
         </div>
@@ -241,60 +369,59 @@
     <!-- Experience Section -->
     <section id="experiencia" style="background: var(--bg-secondary);">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 48px;">
+        <div class="experience-grid">
           <div>
-            <h2 class="text-gradient" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 24px;">Experiencia
+            <h2 class="text-gradient section-title">Experiencia
               Profesional</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 24px;">Mi trayectoria aportando valor en empresas
+            <p class="experience-desc">Mi trayectoria aportando valor en empresas
               tecnológicas y de logística.</p>
             <a href="cv/Kelly_Germano_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline"
               style="font-size: 0.9rem;">Descargar CV Completo</a>
           </div>
 
           <div>
-            <!-- Experience Item -->
-            <div
-              style="border-left: 2px solid var(--glass-border); padding-left: 32px; padding-bottom: 48px; position: relative;">
-              <div
-                style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--brand-primary); border-radius: 50%; box-shadow: 0 0 10px var(--brand-glow);">
+            <div>
+              <!-- Experience Item 1 -->
+              <div class="experience-item">
+                <div class="experience-dot"></div>
+                <h3 class="experience-title">Analista de Datos Operacionales</h3>
+                <div class="experience-meta">Encobox · Barcelona | Enero 2024 - Actualidad</div>
+                <p style="color: var(--text-secondary);">
+                  Lidero la digitalización de procesos operativos. He implementado sistemas de reporte automático y
+                  modelos de predicción que han mejorado la eficiencia de la planificación semanal en un 30%.
+                </p>
               </div>
-              <h3 style="font-size: 1.25rem; font-weight: 700;">Analista de Datos Operacionales</h3>
-              <div style="color: var(--text-secondary); margin: 4px 0 12px; font-size: 0.9rem;">Encobox · Barcelona |
-                Enero 2024 - Actualidad</div>
-              <p style="color: var(--text-secondary);">
-                Lidero la digitalización de procesos operativos. He implementado sistemas de reporte automático y
-                modelos de predicción que han mejorado la eficiencia de la planificación semanal en un 30%.
-              </p>
-            </div>
 
-            <!-- Experience Item (Previous/Example - keeping it clean, can add more if migration data says so, for now sticking to the provided content) -->
-            <!-- Just one main role listed in previous content, so I'll keep it focused or add education if needed in future -->
+              <!-- Experience Item 2 -->
+              <div class="experience-item">
+                <div class="experience-dot"></div>
+                <h3 class="experience-title">Data Analyst Intern</h3>
+                <div class="experience-meta">Logística Global S.A. · Barcelona | 2023</div>
+                <p style="color: var(--text-secondary);">
+                  Apoyo en la creación de dashboards en Power BI y limpieza de datos con Python. Automatización de
+                  reportes diarios.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- About/Skills Section Compact -->
     <section id="sobre-mi">
       <div class="container">
-        <div
-          style="background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 48px; text-align: center;">
-          <h2 style="font-size: 2rem; margin-bottom: 32px;">Stack Tecnológico</h2>
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
-            <span
-              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Python</span>
-            <span
-              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">SQL</span>
-            <span
-              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Pandas
+        <div class="tech-container">
+          <h2 class="tech-title">Stack Tecnológico</h2>
+          <div class="tech-grid">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">R</span>
+            <span class="tech-badge">SQL</span>
+            <span class="tech-badge">Pandas
               & Scikit-learn</span>
-            <span
-              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Power
+            <span class="tech-badge">Power
               BI</span>
-            <span
-              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Git</span>
-            <span
-              style="padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--glass-border);">Flask</span>
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">Flask</span>
           </div>
         </div>
       </div>
@@ -302,13 +429,13 @@
 
     <!-- Contact Section -->
     <section id="contacto">
-      <div class="container" style="text-align: center; max-width: 600px;">
-        <h2 class="text-gradient" style="font-size: 3rem; font-weight: 800; margin-bottom: 24px;">Hablemos.</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 1.2rem;">
+      <div class="container contact-container">
+        <h2 class="text-gradient contact-title">Hablemos.</h2>
+        <p class="contact-desc">
           Estoy siempre abierta a discutir sobre análisis de datos, optimización de software o nuevas oportunidades
           laborales.
         </p>
-        <div style="display: flex; gap: 16px; justify-content: center;">
+        <div class="contact-actions">
           <a href="mailto:jobs@kellygermano.com" class="btn btn-primary">jobs@kellygermano.com</a>
           <a href="https://linkedin.com/in/kellygermano" target="_blank" rel="noopener noreferrer"
             class="btn btn-outline">LinkedIn</a>
@@ -319,7 +446,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> Kelly Germano. Diseñado y Desarrollado con ❤️.</p>
+      <p>&copy; <span id="year"></span> Kelly Germano. Diseñado y Desarrollado.</p>
     </div>
   </footer>
 

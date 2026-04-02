@@ -175,14 +175,40 @@ footer {
 
 @media (max-width: 768px) {
     nav {
-        display: none;
+        background: rgba(5, 5, 5, 0.95);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
     }
 
-    /* Simplified for initial step */
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
     .menu-trigger {
         display: block;
         color: white;
         cursor: pointer;
+        font-size: 1.5rem;
+        z-index: 101;
     }
 
     section {
@@ -215,4 +241,364 @@ footer {
 .hero-actions {
     display: flex;
     gap: 16px;
+}
+
+/* Security Refactor & Hover Effects */
+.profile-image {
+    transition: transform 0.3s ease;
+    transform: rotate(3deg);
+}
+
+.profile-image:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Refactored Inline Styles */
+
+/* Hero Section */
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text-column {
+    max-width: 600px;
+}
+
+.availability-badge {
+    color: var(--brand-primary);
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.hero-image-column {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--brand-glow);
+    filter: blur(80px);
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.profile-image {
+    width: 380px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Transition and transform defined in previous step */
+}
+
+
+/* Projects Section */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    /* Transition defined in previous step */
+}
+
+.card-header {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--brand-primary);
+}
+
+.icon-orange {
+    background: rgba(249, 115, 22, 0.1);
+    color: var(--brand-secondary);
+}
+
+.icon-purple {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    background: #1e1e1e;
+    padding: 4px 10px;
+    border-radius: 99px;
+    border: 1px solid #333;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+.project-list {
+    list-style: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    border-left: 2px solid var(--glass-border);
+    padding-left: 16px;
+}
+
+.project-list li {
+    margin-bottom: 8px;
+}
+
+.project-link {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    /* Color defined inline previously, moving to specific classes or keeping inline style for color ONLY if dynamic, but here fixed classes are better */
+}
+
+.link-blue {
+    border-color: var(--brand-primary);
+}
+
+.link-orange {
+    border-color: var(--brand-secondary);
+}
+
+.link-purple {
+    border-color: #a855f7;
+}
+
+
+/* Experience Section Enhanced */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+}
+
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.experience-item {
+    border-left: 2px solid var(--glass-border);
+    padding-left: 32px;
+    padding-bottom: 48px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.experience-item:last-child {
+    border-left-color: transparent;
+    padding-bottom: 0;
+}
+
+.experience-dot {
+    position: absolute;
+    left: -9px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background: var(--brand-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover .experience-dot {
+    background: white;
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.4);
+    transform: scale(1.1);
+}
+
+.experience-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.experience-meta {
+    color: var(--brand-primary);
+    font-size: 0.9rem;
+    margin: 4px 0 12px;
+    font-weight: 500;
+}
+
+
+/* Tech Stack Section Enhanced */
+.tech-container {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle glow behind tech stack */
+.tech-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: var(--brand-glow);
+    filter: blur(80px);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.tech-badge {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 99px;
+    border: 1px solid var(--glass-border);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tech-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* Contact Section */
+.contact-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.contact-desc {
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    font-size: 1.2rem;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
 }
